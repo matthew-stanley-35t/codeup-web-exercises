@@ -7,8 +7,8 @@ alert("Welcome to my Website!");
 //var favoriteColor = prompt("Please enter your favorite color:");
 //alert("Great! " + favoriteColor + " is my favorite color too!");
 
-var whichFunction = prompt("Which function would you like to run? 1)Movie Rental 2)Pay calculator 3)Class Scheduler 4)Product offer")
-var conflict;
+let whichFunction = prompt("Which function would you like to run? \n 1)Movie Rental 2)Pay calculator 3)Class Scheduler 4)Product offer");
+let conflict;
 
 if(whichFunction != undefined){
     functionActivator();
@@ -28,17 +28,17 @@ function functionActivator(){
         productOffer();
     }
     else{
-        alert("This is not a valid selection. Please reload and try again.")
+        alert("This is not a valid selection. Please reload and select 1 - 4.")
     }
 }
 
 function movieRental() {
-    alert("You rented some movies! How much is it costing?");
+    alert("You rented some movies! How much do you owe so far?");
 
-    var movieOne = prompt("How many days ago did you rent 'The Little Mermaid'?");
-    var movieTwo = prompt("How many days ago did you rent 'Brother Bear'?");
-    var movieThree = prompt("How many days ago did you rent 'Hercules'?");
-    var totalRentalTime = Number(movieOne) + Number(movieTwo) + Number(movieThree);
+    let movieOne = prompt("How many days ago did you rent 'The Little Mermaid'?");
+    let movieTwo = prompt("How many days ago did you rent 'Brother Bear'?");
+    let movieThree = prompt("How many days ago did you rent 'Hercules'?");
+    let totalRentalTime = Number(movieOne) + Number(movieTwo) + Number(movieThree);
 
     alert("You have " + totalRentalTime + " days worth of movie rentals. Your current amount due is: $" + totalRentalTime * 3)
 
@@ -47,35 +47,45 @@ function movieRental() {
 
 
 function payCalculator(){
-    alert("Let's figure out how much you made this week!");
+    alert("Weekly Pay Calculator! \n Let's figure out how much you made this week!");
 
-    var googlePay = 400;
-    var amazonPay = 380;
-    var facebookPay = 350;
+    let googlePay = 400;
+    let amazonPay = 380;
+    let facebookPay = 350;
 
-    var googleHours = prompt("How many hours did you work for google this week?");
-    var amazonHours = prompt("How many hours did you work for amazon this week?");
-    var facebookHours = prompt("How many hours did you work for facebook this week?");
+    let googleHours = prompt("How many hours did you work for google this week?");
+    let amazonHours = prompt("How many hours did you work for amazon this week?");
+    let facebookHours = prompt("How many hours did you work for facebook this week?");
 
-    var totalPay = (Number(googleHours)*googlePay) + (Number(amazonHours)*amazonPay) + (Number(facebookHours)*facebookPay);
+    let totalPay = (Number(googleHours)*googlePay) + (Number(amazonHours)*amazonPay) + (Number(facebookHours)*facebookPay);
 
     alert("You worked hard this week! Congrats you made $" + totalPay + " (before taxes, womp womp)")
+    let breakdown = prompt("Would you like to see a breakdown of how much you made from each job? y/n")
+
+    if (breakdown === "y"){
+        alert("You worked " + googleHours + " hours for google and made $" + googleHours*googlePay + "\n You worked " + amazonHours + " hours for amazon and made $" + amazonHours*amazonPay + "\n You worked " + facebookHours + " hours for facebook and made $" + facebookHours*facebookPay);
+    }
+    if (breakdown === "n"){
+        alert("Thanks for using the Weekly Pay Calculator")
+    }
+    if (breakdown != "y" || "no"){
+        alert("Please reload and make a valid selection of y or n")
+    }
 }
 
 function classScheduler(){
     alert("Welcome to the class scheduler");
-    var classSelection = prompt("Which Class do you want to enroll in? 1)Math 2)Computers 3)Creative writing");
+    let classSelection = prompt("Which Class do you want to enroll in? 1)Math 2)Computers 3)Creative writing");
 
-    var classMaxSeats = 20;
+    let classMaxSeats = 20;
     const currentSchedule = ["mon", "wed", "fri"];
-    var mathDay = "mon";
-    var computersDay = "tues";
-    var writingDay = "thurs";
-    var mathSeats = 12;
-    var computerSeats = 10;
-    var writingSeats = 20;
-    var daySeats;
-    var maxMet;
+    let mathDay = "mon";
+    let computersDay = "tues";
+    let writingDay = "thurs";
+    let mathSeats = 12;
+    let computerSeats = 10;
+    let writingSeats = 20;
+    let daySeats;
 
     if(classSelection != undefined){
         selectionFiller();
@@ -125,15 +135,15 @@ function classScheduler(){
 function productOffer(){
     alert("Congratulations on receiving your offer code. Please answer the following questions to check if the offer applies.");
 
-    var premiumUser = prompt("Are you a premium user? y/n");
-    var numberOfItems = prompt("How many items did you purchase?");
-    var offerExpireMonth = prompt("What month does your offer expire? Please use format: 2 digit month. Example Nov = 11");
-    var offerExpireYear = prompt("What year does your offer expire? Please use format: 4 digit year. Example 2022");
-    var currentYear;
-    var currentMonth;
+    let premiumUser = prompt("Are you a premium user? y/n");
+    let numberOfItems = prompt("How many items did you purchase?");
+    let offerExpireMonth = prompt("What month does your offer expire? Please use format: 2 digit month. Example Nov = 11");
+    let offerExpireYear = prompt("What year does your offer expire? Please use format: 4 digit year. Example 2022");
+    let currentYear;
+    let currentMonth;
 
     function getDateInfo(){
-        var date = new Date();
+        let date = new Date();
         currentYear = date.getFullYear();
         currentMonth = date.getUTCMonth() + 1;
     }
