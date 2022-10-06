@@ -7,9 +7,11 @@ alert("Welcome to my Website!");
 //var favoriteColor = prompt("Please enter your favorite color:");
 //alert("Great! " + favoriteColor + " is my favorite color too!");
 
+//Prompt the user to select a function
 let whichFunction = prompt("Which function would you like to run? \n 1)Movie Rental 2)Pay calculator 3)Class Scheduler 4)Product offer");
 let conflict;
 
+//check to see if the user has made a selection, if they have call the master function that calls the function the user picked
 if(whichFunction != undefined){
     functionActivator();
 }
@@ -32,6 +34,7 @@ function functionActivator(){
     }
 }
 
+//prompt the user to input the number of days they've had each rental then calculate current amount owed
 function movieRental() {
     alert("You rented some movies! How much do you owe so far?");
 
@@ -44,8 +47,7 @@ function movieRental() {
 
 }
 
-
-
+//prompt the user to input how many hours they worked for each company then calculate the total made based on known pay rates.
 function payCalculator(){
     alert("Weekly Pay Calculator! \n Let's figure out how much you made this week!");
 
@@ -73,6 +75,7 @@ function payCalculator(){
     }
 }
 
+//Prompt the user to pick a class to enroll in. Max class size and current student schedule are "known" make checks to make sure the class isn't full AND doesn't conflict with current schedule.
 function classScheduler(){
     alert("Welcome to the class scheduler");
     let classSelection = prompt("Which Class do you want to enroll in? 1)Math 2)Computers 3)Creative writing");
@@ -132,6 +135,7 @@ function classScheduler(){
     }
 }
 
+//Prompt the user to identify if they are a premium user, how many items purchased, and the month and day their offer code expires. Validate all items or reject coupon.
 function productOffer(){
     alert("Congratulations on receiving your offer code. Please answer the following questions to check if the offer applies.");
 
@@ -164,7 +168,4 @@ function productOffer(){
             alert("Congratulations, this offer is valid for your purchase!")
         }
     }
-
-
-
 }
