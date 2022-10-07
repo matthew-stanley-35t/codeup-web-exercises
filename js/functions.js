@@ -83,7 +83,7 @@ console.log(isTwo(random), random);
 
 
 function calculateTip(tipPercent, billTotal){
-    return ("Your Total is: $" + (parseFloat(billTotal) + parseFloat(billTotal*tipPercent)) + " including a tip of: " + parseFloat(billTotal*tipPercent));
+    return ("Your Total is: $" + (parseFloat(billTotal) + parseFloat(billTotal*tipPercent)) + " including a tip of: $" + parseFloat(billTotal*tipPercent));
 }
 
 /**
