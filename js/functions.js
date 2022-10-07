@@ -11,7 +11,7 @@
 
 // sayHello();
 // function sayHello(name){
-//     return console.log("Hello, " + name);
+//     return "Hello, " + name;
 // }
 
 /**
@@ -83,7 +83,7 @@ console.log(isTwo(random), random);
 
 
 function calculateTip(tipPercent, billTotal){
-    return console.log("Your Total is: $" + (parseFloat(billTotal) + parseFloat(billTotal*tipPercent)) + " including a tip of: " + parseFloat(billTotal*tipPercent));
+    return ("Your Total is: $" + (parseFloat(billTotal) + parseFloat(billTotal*tipPercent)) + " including a tip of: " + parseFloat(billTotal*tipPercent));
 }
 
 /**
@@ -92,8 +92,8 @@ function calculateTip(tipPercent, billTotal){
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-alert("Bill + Tip Calculator")
-calculateTip(prompt("Please enter your tip percentage as a decimal"), prompt("Please enter your total bill"));
+alert(calculateTip(prompt("Please enter your tip percentage as a decimal"), prompt("Please enter your total bill")));
+
 
 
 /**
