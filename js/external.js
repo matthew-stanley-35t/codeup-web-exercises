@@ -1,5 +1,7 @@
 "use strict";
 
+//(function(){ entire body of js code in here })();
+
 console.log("Hello from external JavaScript");
 
 alert("Welcome to my Website!");
