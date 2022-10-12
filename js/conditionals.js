@@ -33,7 +33,7 @@
 //         return "Orange is my wife's favorite color!";
 //     }
 //     else {
-//         return "I dont really know anything about " + userColor + ", sorry.";
+//         return "I don't really know anything about " + userColor + ", sorry.";
 //     }
 // }
 // console.log(analyzeColor("Red"));
@@ -46,8 +46,8 @@
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
 
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -65,16 +65,16 @@ function analyzeColor(userColor){
     switch(userColor.toLowerCase()){
         case "red":
             alert("Red is the best color for a fire truck");
-            break;
+            return "Red is the best color for a fire truck";
         case "blue":
             alert("Blue is a great color. Especially if it's Chargers royal blue.");
-            break;
+            return "Blue is a great color. Especially if it's Chargers royal blue.";
         case "orange":
             alert("Orange is my wife's favorite color!");
-            break;
+            return "Orange is my wife's favorite color!";
         default:
             alert("I dont know much about " + userColor + ", sorry about that.");
-            break;
+            return "I dont know much about " + userColor + ", sorry about that.";
     }
 }
 
@@ -135,7 +135,7 @@ function calculateTotal (discountNumber, startingTotal){
 
 //let userLuckyNumber = prompt("Please enter your lucky discount number:");
 //let goodsTotal = prompt("Please enter the total amount of your purchase:");
-//alert(calculateTotal(userluckyNumber, goodsTotal));
+//alert(calculateTotal(userLuckyNumber, goodsTotal));
 
 /**
  * TODO:
