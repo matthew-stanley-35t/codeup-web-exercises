@@ -169,6 +169,13 @@
         showAllBooks();
     }
 
+    //alternately:
+    // function createBook2(title, firstName, lastName){
+    //     let newBook = {title, firstName, lastName};
+    //     books.unshift(newBook);
+    //     showAllBooks();
+    // }
+
 
     if(confirm("Would you like to add a book?")){
         let bkTitle = prompt("Please enter the title of the book:")
