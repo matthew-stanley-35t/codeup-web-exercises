@@ -9,7 +9,6 @@ body, html {
 .message{
     width: 80%;
     margin: 1em;
-    height: 18px;
     border-radius: 5px;
     border: 1px solid lightgrey;
     padding: 9px;

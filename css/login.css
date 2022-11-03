@@ -24,7 +24,7 @@ fieldset {
     /* There must be 1em between the content and the border of this element */
     padding: 1em;
     /* It should have no border */
-    border: 0;
+    border: none;
     /* Its background should be white */
     background-color: white;
 }

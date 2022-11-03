@@ -1,0 +1,7 @@
+.jumbotron{
+    display: flex;
+    height: 346px;
+    background-size: cover;
+    background-image: url("../imgs/pizza.png");
+    align-items: center;
+}
