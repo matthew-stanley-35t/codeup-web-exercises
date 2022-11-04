@@ -1,0 +1,58 @@
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: mediumpurple;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #c2d5ff;
+    background-image: url(../imgs/backgroundTech.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Verdana, sans-serif;
+}
+
+ul {
+    list-style: lower-roman;
+}
+
+table.realTable {
+    padding: 1em;
+    font-size: larger;
+}
+
+tr.realTable {
+    padding: 2em;
+    font-size: large;
+}
+
+td.realTable {
+    padding: 2em;
+    font-size: large;
+}
+
+a:active {
+    text-decoration: none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+    color:blueviolet;
+}
+
+a:visited {
+    text-decoration: none;
+    color:mediumblue;
+}
+
+a:link {
+    text-decoration: none;
+    color:darkslateblue;
+}
