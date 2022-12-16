@@ -48,7 +48,7 @@ $(function() {
         }, 5000);
     }
 //allows for keyboard input
-    window.addEventListener('keydown', function(event){
+    $(document).keyup(function(event){
         const validKeyDown = document.querySelector(`button[data-key="${event.keyCode}"]`);
 
         if(!!validKeyDown){
