@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Marker Example</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My favorite restaurants in Denver!</h1>
+
+<div id='map'></div>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/tokens.js"></script>
+
+<script>
+    "use strict";
+
+    let favoriteRestaurants = [
+        {
+            name: "BluePan Pizza",
+            features: "Detroit Style Deep Dish Pizza. My favorite pizza in Denver",
+            coords: [-104.945862, 39.735329]
+        }, {
+            name: "SliceWorks",
+            features: "Large slice NY style pizza by the slice or whole pies.",
+            coords: [-104.978440, 39.739740]
+        }, {
+            name: "Benny Blanco's Pizza",
+            features: "Large slice NY style pizza by the slice or whole pies. OPEN VERY LATE!!!",
+            coords: [-104.979410, 39.736700]
+        }, {
+            name: "DP Dough",
+            features: "Large slice NY style pizza by the slice or whole pies. OPEN VERY LATE!!!",
+            coords: [-104.971213, 39.739836]
+        }
+    ];
+
+
+    mapboxgl.accessToken = mapBoxKey;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 12,
+        center: [-104.991531, 39.742043]
+    });
+
+    favoriteRestaurants.forEach(function (restaurant){
+        new mapboxgl.Marker()
+            .setLngLat(restaurant.coords)
+            .setPopup( new mapboxgl.Popup()
+                .setHTML(`<p>${restaurant.name}</p><br><p>${restaurant.features}</p>`))
+            .addTo(map);
+    });
+
+</script>
+</body>
+</html>
