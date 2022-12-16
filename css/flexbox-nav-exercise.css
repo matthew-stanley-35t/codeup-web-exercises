@@ -1,0 +1,36 @@
+.nav-container > *{
+    box-sizing: border-box;
+    display: flex;
+
+
+}
+div {
+    background:linear-gradient(0deg, white 20%, grey 20% 80%, white 80%);
+}
+
+.nav-links {
+    all: unset;
+    display: inline-block;
+    padding: .5em;
+    align-content: center;
+    line-height: calc(.2em + 3em + 2em);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+#logo{
+    text-align: center;
+    margin: auto;
+    padding: .2em 0;
+    font-size: 3em;
+    font-family: 'Work Sans', sans-serif;
+
+}
+img {
+    max-height: 15px;
+}
+a:hover{
+    color: blue;
+}
+img:hover{
+    background-color: rgba(255, 255, 255, 0.47);
+}

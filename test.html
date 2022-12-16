@@ -5,29 +5,45 @@
   <title>AJAX</title>
 </head>
 <body>
-<h1>AJAX</h1>
-<div id="pic-frame"></div>
-<input type="text" id="poke-name">
-<button id="btn">Search for Pokémon</button>
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-  $.ajax('https://pokeapi.co/api/v2/pokemon/charmander').done(function(data) {
-    console.log(data);
-  });
+  let originalString = "STRING";
+  let description = "DESCRIPTION";
+  var myOutput = originalString + " is an example of " + description + " thinking.";
+  console.log(myOutput);
 
-  $("#btn").click(function () {
-    $("#pic-frame").html("<img src='img/pixel-art.gif' alt='loading'>");
-    let query = $("#poke-name").val();
-    $.get("https://pokeapi.co/api/v2/pokemon/" + query).done(function(data) {
-      console.log(data);
-      $("#pic-frame").html("<img src='"+ data.sprites.front_default +"' alt='Pokéfriend'>");
-    }).fail(function() {
-      $("#pic-frame").html("<p>We're sorry, but your request could not be completed. \"" + query + "\" is not a Pokémon.</p>");
-    }).always(function() {
-      $("#pic-frame").append("<p>Request to API complete.</p>");
-    });
-  });
+
+  const myOutputs = `{originalString} is an example of {description} thinking.`;
+
+
+
+
+  console.log(myOutputs);
+
 </script>
+
+<!--<h1>AJAX</h1>-->
+<!--<div id="pic-frame"></div>-->
+<!--<input type="text" id="poke-name">-->
+<!--<button id="btn">Search for Pokémon</button>-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<!--<script>-->
+<!--  $.ajax('https://pokeapi.co/api/v2/pokemon/charmander').done(function(data) {-->
+<!--    console.log(data);-->
+<!--  });-->
+
+<!--  $("#btn").click(function () {-->
+<!--    $("#pic-frame").html("<img src='img/pixel-art.gif' alt='loading'>");-->
+<!--    let query = $("#poke-name").val();-->
+<!--    $.get("https://pokeapi.co/api/v2/pokemon/" + query).done(function(data) {-->
+<!--      console.log(data);-->
+<!--      $("#pic-frame").html("<img src='"+ data.sprites.front_default +"' alt='Pokéfriend'>");-->
+<!--    }).fail(function() {-->
+<!--      $("#pic-frame").html("<p>We're sorry, but your request could not be completed. \"" + query + "\" is not a Pokémon.</p>");-->
+<!--    }).always(function() {-->
+<!--      $("#pic-frame").append("<p>Request to API complete.</p>");-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
 </body>
 </html>
