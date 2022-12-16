@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>national park faq</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $(`dd`).click(function (){
+                console.log(`click`);
+                $(this).toggle();
+            });
+            $(`dt`).click(function(){
+                $(this).parents(`dl`).children(`dd`).css(`display`, `block`)
+            });
+
+
+        });
+
+
+    </script>
+
+    <style>
+        .classic {
+            height: 200px;
+            width: 300px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="row row-cols-5">
+        <div class="col">
+            <dl>
+                <dt>
+                    How many acres of land are considered protected in America as National Park land?
+                </dt>
+                <dd class="">
+                    The National Park Service protects over 84 million acres of wild landscapes and historic sites.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which National Park was created first and is the oldest?
+                </dt>
+                <dd>
+                    Yellowstone National Park was founded in 1872 and is the oldest National Park.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which National park has the best Waterfalls?
+                </dt>
+                <dd>
+                    Three of the ten highest waterfalls in the world are inside of Yosemite National Park in California.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which National Park is the largest of the National Parks?
+                </dt>
+                <dd>
+                    Wrangell-St. Elias National Park, Alaska, is the largest, covering 13,000 square miles or 13.2 million acres.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which is the smallest national park?
+                </dt>
+                <dd>
+                    The smallest national park is Hot Springs National Park in Arkansas, coming in at about 5,500 acres.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Is it possible to visit 2 parks in one day?
+                </dt>
+                <dd>
+                    You can visit two parks in a day if you visit Yellowstone National Park and Grand Teton National Park as they are only 10 miles apart in Wyoming.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which National Park has the most visitors annually?
+                </dt>
+                <dd>
+                    Grand Canyon National Park saw about 4.53 million visitors last year.
+
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which State has the most National Parks?
+                </dt>
+                <dd>
+                    California has the most with 9 national parks.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    Which National Parks were used as sets for Star Wars?
+                </dt>
+                <dd>
+                    Death Valley National Park and Redwood National Park were both used as sets while filming the original Star Wars Trilogy.
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    What is the newest park?
+                </dt>
+                <dd>
+                    Pinnacles National Park in California was designated on January 10, 2013 and is America's newest national park.
+                </dd>
+            </dl>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+</body>
+</html>
