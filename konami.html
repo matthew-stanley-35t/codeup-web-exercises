@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/konami.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Prosto+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="codeEntered"></div>
+<section class='controller' id="controller">
+    <div class='controller-content'>
+        <div class='d-pad-wrapper'>
+            <div class='d-pad'>
+                <button class='d-pad-button d-pad-button-up' data-key='38'></button>
+                <button class='d-pad-button d-pad-button-left' data-key='37'></button>
+                <button class='d-pad-button d-pad-button-right' data-key='39'></button>
+                <button class='d-pad-button d-pad-button-down' data-key='40'></button>
+
+                <div class='d-pad-center'>
+                    <div class='d-pad-center-round'></div>
+                </div>
+            </div>
+        </div>
+        <div class='menu'>
+            <div class='menu-block'></div>
+            <div class='menu-block'></div>
+            <div class='menu-block'>
+                <span>SELECT</span>
+                <span>START</span>
+            </div>
+            <div class='menu-controller'>
+                <button  class='menu-button'></button>
+                <button  class='menu-button' data-key='13'></button>
+            </div>
+            <div class='menu-block'></div>
+
+        </div>
+        <div class='actions'>
+            <span class='actions-brand'>Nintendo&#174;</span>
+            <button id="bButton" class='actions-button actions-button-b' data-key='66'></button>
+            <button id="aButton" class='actions-button actions-button-a' data-key='65'></button>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/konami.js"></script>
+</body>
+</html>

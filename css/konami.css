@@ -1,0 +1,338 @@
+
+
+/*Global Style*/
+body {
+    height: 100vh;
+    background: #e4000f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e4000f;
+    font-family: 'Audiowide', cursive;
+    overflow: hidden;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/*Controller Style*/
+.controller {
+    position: relative;
+    background: #d8d7d2;
+    width: 610px;
+    height: 260px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0.3px #0b0b09;
+}
+
+.controller::after {
+    content: '';
+    height: 10px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 160px;
+    box-shadow: inset 0px 0px 5px 1px #a6a69a
+}
+
+.controller-content {
+    margin: 40px auto;
+    background: #353533;
+    width: 570px;
+    height: 202px;
+    display: grid;
+    grid-template-columns: 180px 170px 1fr;
+    border-radius: 4px;
+    border: 1px solid #a6a69a;
+    box-shadow:  0px 1px 1px 1px #d8d7d2;
+}
+
+
+/*D-Pad Style*/
+.d-pad {
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    margin-left: 25px;
+    display: grid;
+    grid-template-columns: 38px 37px 38px;
+    grid-template-rows: 38px 37px 38px;
+    grid-template-areas:
+  	". top ."
+     "left center right"
+     ". down .";
+}
+
+.d-pad-button {
+    background: #0b0b09;
+    border: none;
+    box-shadow: 0px 1px 2px 0.2px #0b0b09;
+
+}
+
+.d-pad-button-up {
+    grid-area: top;
+    border-radius: 4px 4px 0 0;
+}
+
+.d-pad-button-up::before {
+    content: '';
+    position: absolute;
+    background-color: #d8d7d2;
+    z-index: -1;
+    border-radius: 8px;
+    border: 6px solid #d8d7d2;
+    box-shadow: inset 0px 1px 1px 0.2px #0b0b09;
+    box-sizing: border-box;
+    left: 32px;
+    top: -5px;
+    height: 42px;
+    width: 49px;
+    border-width: 4px 4px 0px 4px;
+    border-radius: 8px 8px 0 0;
+}
+
+.d-pad-button-left {
+    grid-area: left;
+    border-radius: 4px 0 0 4px;
+}
+
+.d-pad-button-left::before {
+    content: '';
+    position: absolute;
+    background-color: #d8d7d2;
+    z-index: -1;
+    border-radius: 8px;
+    border: 6px solid #d8d7d2;
+    box-shadow: inset 0px 1px 1px 0.2px #0b0b09;
+    box-sizing: border-box;
+    z-index: -2;
+    left: -6px;
+    top: 33px;
+    width: 53px;
+    height: 48px;
+    border-width: 4px 0px 4px 4px;
+}
+
+
+.d-pad-button-right {
+    grid-area: right;
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(
+            154deg,
+            #0b0b09 0%,
+            #474747 60%,
+            #474747 100%
+    );
+}
+
+.d-pad-button-right::before {
+    content: '';
+    position: absolute;
+    background-color: #d8d7d2;
+    z-index: -1;
+    border-radius: 8px;
+    border: 6px solid #d8d7d2;
+    box-shadow: inset 0px 1px 1px 0.2px #0b0b09;
+    box-sizing: border-box;
+    z-index: -2;
+    right: 36px;
+    top: 33px;
+    width: 53px;
+    height: 48px;
+    border-width: 4px 4px 4px 0px;
+}
+
+.d-pad-button-down {
+    grid-area: down;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(150deg,
+    #0b0b09 0%,
+    #474747 38%,
+    #474747 100%
+    )
+}
+
+.d-pad-button-down::before {
+    content: '';
+    position: absolute;
+    background-color: #d8d7d2;
+    z-index: -1;
+    border-radius: 8px;
+    border: 6px solid #d8d7d2;
+    box-shadow: inset 0px 1px 1px 0.2px #0b0b09;
+    box-sizing: border-box;
+    width: 49px;
+    left: 32px;
+    bottom: -6px;
+    height: 42px;
+    border-width: 0px 4px 4px 4px;
+    border-radius: 0 0 8px 8px;
+}
+
+
+.d-pad-center {
+    background: #0b0b09;
+    grid-area: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(133deg,
+    #0b0b09 0%,
+    #0b0b09 50%,
+    #474747 100%
+    )
+}
+
+.d-pad-center-round {
+    background: #0b0b09;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 5px 2.2px #0b0b09;
+    border: 1px solid #0b0b09;
+    background-image: radial-gradient(
+            circle at bottom right,
+            #fff 10%,
+            grey 10%,
+            #0b0b09 71%
+    )
+}
+
+
+
+
+/*Menu Style*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-block {
+    width: 100%;
+    height: 30px;
+    background: #a6a69a;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-block:first-child {
+    margin-top: 1px;
+    border-radius: 0 0 8px 8px;
+}
+
+.menu-block:last-child {
+    height: 18px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1px;
+}
+
+.menu-controller {
+    background: #d8d7d2;
+    border: 6px solid #d8d7d2;
+    height: 55px;
+    width: 162px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 1px 5px 0.2px #0b0b09;
+}
+
+.menu-button {
+    background: #505050;
+    border-radius: 10px;
+    border: 1px solid #505050;
+    height: 14px;
+    width: 40px;
+    margin: 10px;
+    box-shadow:  0px 1px 2px 0.5px #0b0b09;
+}
+
+
+/*Actions Style*/
+.actions {
+    position: relative;
+    z-index: 2;
+    margin: 112px 0 0 27px;
+}
+
+.actions-brand {
+    position: absolute;
+    bottom: 140px;
+    left: 14px;
+    font-family: 'Prosto One', cursive;
+    font-size: 17px;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+.actions-button {
+    position: relative;
+    background-image: radial-gradient(circle at bottom right, #fc9096, #e4000f);
+    border-color: #e4000f;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0px 1px 2px 0.5px #0b0b09;
+}
+
+.actions-button-a::after {
+    content: 'A';
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    font-size: 15px;
+    color: #e4000f;
+    left: 40px;
+    font-family: 'Audiowide', cursive;
+}
+
+
+.actions-button-b::after {
+    content: 'B';
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    font-size: 15px;
+    color: #e4000f;
+    left: 40px;
+    font-family: 'Audiowide', cursive;
+}
+
+
+.actions-button::before {
+    content: '';
+    display:block;
+    position: absolute;
+    background-color: #d8d7d2;
+    height: 60px;
+    width: 60px;
+    top: -8px;
+    left: -8px;;
+    z-index:-1;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.invisible{
+    display: none;
+}
